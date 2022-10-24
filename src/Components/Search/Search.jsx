@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import './Search.scss';
 
 export default function Search({ serchMeal }) {
     const [search, setSearch] = useState('');
+    const navigate = useNavigate();
 
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
-            const { href } = window.location;
-            window.location.href = `${href}/searchMeal/${search}`;
+            navigate(`/searchMeal/${search}`);
         }
     };
 
