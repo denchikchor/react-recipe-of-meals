@@ -1,4 +1,4 @@
-import { CategoryItem } from './CategoryItem';
+import { CategoryItem } from './CategoryItem/CategoryItem';
 
 function CategoryList({ catalog = [] }) {
     return (

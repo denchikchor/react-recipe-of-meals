@@ -1,0 +1,47 @@
+.card{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    font-family: montserrat;
+
+    img{
+        border-radius: 20px;
+
+    }
+
+
+    .card-title{
+        font-size: 2rem;
+    }
+
+    p{
+        font-size: 1.1rem;
+    }
+
+    .card-action{
+        margin-top: 15px;
+        a{
+            padding: 5px 10px;
+        border-radius: 5px;
+        color:#D8541C;
+        text-decoration: none;
+        font-family: montserrat;
+        border: 2px solid #D8541C;
+        transition: all .3s ease-in-out;
+        }
+        a:hover{
+            background-color:#D8541C;
+            color:#fff;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .card{
+
+        padding: 30px;
+
+        
+    }
+
+}

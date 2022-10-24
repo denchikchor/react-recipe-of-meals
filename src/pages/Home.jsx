@@ -2,19 +2,12 @@ import { useState, useEffect } from 'react';
 import { getAllCategories } from '../api';
 import { Preloader } from '../Components/Preloader';
 import { CategoryList } from '../Components/CategoryList';
-import { Search } from '../Components/Search';
+import { Banner } from '../Components/Banner/Banner';
 
 function Home() {
     const [catalog, setCatalog] = useState([]);
+    // eslint-disable-next-line
     const [filteredCatalog, setFilteredCatalog] = useState([]);
-
-    const handleSearch = (str) => {
-        setFilteredCatalog(
-            catalog.filter((item) =>
-                item.strCategory.toLowerCase().includes(str.toLowerCase())
-            )
-        );
-    };
 
     useEffect(() => {
         getAllCategories().then((data) => {
@@ -25,7 +18,7 @@ function Home() {
 
     return (
         <>
-            <Search cb={handleSearch} />
+            <Banner />
             {!catalog.length ? (
                 <Preloader />
             ) : (
