@@ -10,7 +10,7 @@ import SearchMeal from './pages/SearchMeal/SearchMeal';
 
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/react-recipe-of-meals">
             <Header />
             <main className="content">
                 <Routes>
